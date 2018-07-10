@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Docs UI Clone</title>
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=noyi100uap6gd1c2y9fdrp6b2xohe5nq99ycdmb5xnj6juwx"></script>
+
+<script src="{% static 'js/my_js.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/my_css.css'%}">
+
+</head>
+<body>
+	<div>
+		<textarea id="text1" style="border: none; font-size: 30px;color:grey; width:300px; " rows="1" placeholder="Untitled Document"></textarea>
+		<button onclick="save()">Save</button>
+	</div>
+	<div>
+  <canvas></canvas>
+	  	</div>
+</body>
+
+<script type="text/javascript">
+	function save(){
+		var text=document.getElementById("text1").value;
+		document.getElementById("text1").innerHTML=text
+	}
+</script>
+</html>
